@@ -1,0 +1,27 @@
+{% extends "structure.html" %}
+
+
+{% block main %}
+  <h1>This is the homepage</h1>
+  <br>
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <img class="mb-4" src="/static/img/bootstrap-logo.svg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+    </form>
+  </main>
+  <a href="/login">Login here!!!</a>
+  <p>{{message}}</p>   
+  <br>
+  <br>
+  <br>
+  <a href="/signup">SIGN up here!!!</a>
+
+{% endblock main %}

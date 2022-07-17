@@ -1,0 +1,13 @@
+html, body{
+	/*background-color: #376CA1;*/
+	/*background-image: url(../img/background.jpg);*/
+	background-color:  yellow;
+}
+
+p{
+	color: red;
+}
+
+h1{
+	color: #328864;
+}
