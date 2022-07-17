@@ -1,10 +1,23 @@
 {% extends "structure.html" %}
 
 
+<style>
+  .form-signin\ w-100\ m-auto{
+    margin: auto;
+    width: 50%;
+    border: 30px solid black;
+    padding: 80px 0;
+    text-align: center;
+    border: 80px solid black;
+  }
+
+</style>
+
 {% block main %}
+  <main class="form-signin w-100 m-auto">
+  <body class="text_center">
   <h1>This is the homepage</h1>
   <br>
-  <main class="form-signin w-100 m-auto">
     <form>
       <img class="mb-4" src="/static/img/bootstrap-logo.svg" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -15,13 +28,14 @@
       <br>
       <br>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+      <a href="/login">Login here!!!</a>
+      <p>{{message}}</p>   
+      <br>
+      <br>
+      <br>
+      <a href="/signup">SIGN up here!!!</a>
     </form>
+  </body>
   </main>
-  <a href="/login">Login here!!!</a>
-  <p>{{message}}</p>   
-  <br>
-  <br>
-  <br>
-  <a href="/signup">SIGN up here!!!</a>
 
 {% endblock main %}
