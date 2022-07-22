@@ -19,10 +19,15 @@ def login():
     if request.method == 'POST':
         session.pop('username', None)
         areyouuser = request.form['username']
-        pwd = model.check_pw(areyouuser)
-        if request.form['password'] == pwd:
-            session['username'] = request.form['username']
-            return redirect(url_for('home'))
+        #user = model.check_users()
+        if areyouuser in user:
+            pwd = model.check_pw(areyouuser)
+            if request.form['password'] == pwd:
+                session['username'] = request.form['username']
+                return redirect(url_for('home'))
+        else:
+            message = 'Either wrong login or password or just Sign Up!!!'
+            return render_template('index.html', message = message)
     return render_template('index.html')
     
 
@@ -82,6 +87,6 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(port = 7000, debug = True)
+    app.run(host='0.0.0.0', port = 7000, debug = True)
 
 ##this will port 5000 by default
